@@ -1,0 +1,291 @@
+@import './reset';
+.wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+@function rem($f) {
+    @return $f / 37.5px * 1rem;
+}
+
+.header {
+    width: 100%;
+    height: rem(45px);
+    background: #FE6634;
+    display: flex;
+    .logo {
+        flex: 1.5;
+        height: 100%;
+        @extend %juzhong;
+        span {
+            font-size: rem(16px);
+        }
+        b {
+            font-size: rem(16px);
+        }
+    }
+    .search {
+        flex: 7.5;
+        height: 100%;
+        @extend %juzhong;
+        input {
+            width: 95%;
+            height: 60%;
+            border-radius: rem(20px);
+            background: white;
+            padding-left: rem(15px);
+        }
+    }
+    .login {
+        flex: 1;
+        height: 100%;
+        @extend %juzhong;
+        b {
+            font-size: rem(24px);
+            color: white;
+        }
+    }
+}
+
+.main {
+    width: 100%;
+    flex: 1;
+    overflow: auto;
+    background: #EFEFEF;
+    .swiper-container {
+        width: 100%;
+        height: rem(178px);
+        background: white;
+        .swiper-wrapper {
+            width: 100%;
+            height: 100%;
+            .swiper-slide {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                li {
+                    width: 20%;
+                    height: 35%;
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: rem(10px);
+                    span {
+                        display: inline-block;
+                        display: flex;
+                        &:nth-child(1) {
+                            flex: 8;
+                            width: 100%;
+                            @extend %juzhong;
+                            .icon {
+                                width: 60%;
+                                height: 90%;
+                            }
+                        }
+                        &:nth-child(2) {
+                            flex: 2;
+                            width: 100%;
+                            text-align: center;
+                            @extend %juzhong;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .discounts {
+        width: 100%;
+        height: rem(115px);
+        margin-top: rem(10px);
+        margin-bottom: rem(10px);
+        padding-left: rem(4px);
+        display: flex;
+        .left {
+            width: 33.3%;
+            height: 100%;
+            background: white;
+            margin-right: rem(5px);
+            @extend %juzhong;
+            flex-direction: column;
+            line-height: rem(20px);
+            p {
+                &:nth-child(1) {
+                    font-size: rem(15px);
+                    color: skyblue;
+                }
+                &:nth-child(2) {
+                    color: #CCC;
+                }
+            }
+        }
+        .middle {
+            width: 33.3%;
+            height: 100%;
+            background: white;
+            margin-right: rem(5px);
+            @extend %juzhong;
+            line-height: rem(20px);
+            flex-direction: column;
+            p {
+                &:nth-child(1) {
+                    font-size: rem(15px);
+                    color: #FF9C8E;
+                }
+                &:nth-child(2) {
+                    color: #CCC;
+                }
+            }
+        }
+        .right {
+            width: 33.3%;
+            height: 100%;
+            background: white;
+            margin-right: rem(5px);
+            @extend %juzhong;
+            line-height: rem(20px);
+            flex-direction: column;
+            p {
+                &:nth-child(1) {
+                    font-size: rem(15px);
+                    color: #F684A5;
+                }
+                &:nth-child(2) {
+                    color: #CCC;
+                }
+            }
+        }
+    }
+    .dl-arae {
+        width: 100%;
+        height: rem(75px);
+        display: flex;
+        justify-content: space-between;
+        background: white;
+        dl {
+            width: 48%;
+            height: 94%;
+            display: flex;
+            margin-top: rem(2px);
+            dt {
+                flex: 6.5;
+                height: 100%;
+                @extend %juzhong;
+                flex-direction: column;
+                p {
+                    text-align: center;
+                }
+            }
+            dd {
+                flex: 3.5;
+                height: 100%;
+                @extend %juzhong;
+                img {
+                    width: 100%;
+                    height: 80%;
+                }
+            }
+            &:nth-child(1) {
+                background: #FFA382;
+                margin-left: rem(5px);
+            }
+            &:nth-child(2) {
+                background: #43CFCC;
+                margin-right: rem(5px);
+            }
+        }
+    }
+    .particularly {
+        width: 100%;
+        height: rem(188px);
+        background: white;
+        display: flex;
+        flex-direction: column;
+        .head {
+            width: 100%;
+            flex: 2;
+            display: flex;
+            justify-content: space-between;
+            h1 {
+                flex: 2;
+                height: 100%;
+                line-height: rem(35px);
+                padding-left: rem(10px);
+            }
+            p {
+                line-height: rem(35px);
+                padding-right: rem(10px);
+            }
+        }
+        .dl-araea {
+            flex: 8;
+            width: 100%;
+            display: flex;
+            dl {
+                width: 32%;
+                height: 100%;
+                margin-right: rem(5px);
+                flex-direction: column;
+                dt {
+                    flex: 8;
+                    width: 100%;
+                    @extend %juzhong;
+                    img {
+                        width: 100%;
+                        height: 90%;
+                    }
+                }
+                dd {
+                    flex: 2;
+                    width: 100%;
+                    line-height: rem(20px);
+                    h2 {
+                        font-size: rem(16px);
+                        margin-top: rem(15px);
+                    }
+                    p {
+                        font-size: rem(14px);
+                        span {
+                            color: red;
+                        }
+                        s {
+                            color: #CCC;
+                            text-decoration: line-through;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    width: 100%;
+    height: rem(45px);
+    .nav {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        li {
+            width: 33.3%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            span {
+                display: inline-block;
+                &:nth-child(1) {
+                    width: 100%;
+                    flex: 8;
+                    @extend %juzhong;
+                    font-size: rem(22px);
+                }
+                &:nth-child(2) {
+                    width: 100%;
+                    flex: 2;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
